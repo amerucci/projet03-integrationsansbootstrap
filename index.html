@@ -38,8 +38,10 @@
         </div>
         <div class="scrollbottom">
             <div class="scrollcontent">
+                <a href="#agency" class="js-scrollTo">
                 <p> Scroll Down</p>
                 <img src="img/scrolldown.png" alt="scroll down" />
+            </a>
             </div>
         </div>
     </header>
@@ -189,7 +191,17 @@
         </div>
     </footer>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                var section = $(this).attr('href'); // Section cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate( { scrollTop: $(section).offset().top }, speed ); // Go
+                return false;
+            });
+        });
+    </script>
 
 </body>
 

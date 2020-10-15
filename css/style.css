@@ -32,6 +32,7 @@ a:hover {
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    text-decoration: none;
 }
 
 body {
@@ -387,6 +388,18 @@ nav ul li a:hover:before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#blog .bloc:hover .imgblog  img {
+    transform:translate(-50%, -50%) rotate(14deg) scale(1.2) ;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 
