@@ -29,6 +29,25 @@
                         <li> <a href="#" class="social"><img src="img/linkedin.png"></a></li>
                     </ul>
                 </nav>
+                <div id="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="menuresp"><nav>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li> <a href="#">Features</a></li>
+                        <li> <a href="#">Extensions</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li> <a href="#">Contact us</a></li>
+                        <li> <a href="#" class="social premiersocial"><img src="img/facebook.png"></a></li>
+                        <li><a href="#" class="social"><img src="img/twitter.png"></a></li>
+                        <li> <a href="#" class="social"><img src="img/skype.png"></a></li>
+                        <li> <a href="#" class="social"><img src="img/linkedin.png"></a></li>
+                    </ul>
+                </nav></div>
             </div>
 
 
@@ -40,9 +59,9 @@
         <div class="scrollbottom">
             <div class="scrollcontent">
                 <a href="#agency" class="js-scrollTo">
-                <p> Scroll Down</p>
-                <img src="img/scrolldown.png" alt="scroll down" />
-            </a>
+                    <p> Scroll Down</p>
+                    <img src="img/scrolldown.png" alt="scroll down" />
+                </a>
             </div>
         </div>
     </header>
@@ -164,7 +183,7 @@
                     laoreet rutrum faucibus dolor auctor.</p>
             </div>
 
-          
+
 
 
 
@@ -175,11 +194,15 @@
         <div class="container flex">
             <div class="col50">
                 <div class="colo50img"><img src="img/write-footer.png" alt="writefooter"></div>
-                <div class="colo50txt">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
+                <div class="colo50txt">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis
+                    lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
             </div>
             <div class="col50">
                 <div class="colo50img"><img src="img/write-footer.png" alt="writefooter"></div>
-                <div class="colo50txt">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
+                <div class="colo50txt">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis
+                    lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
             </div>
         </div>
     </section>
@@ -194,13 +217,27 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+        $(document).ready(function () {
+            $('.js-scrollTo').on('click', function () { // Au clic sur un élément
                 var section = $(this).attr('href'); // Section cible
                 var speed = 750; // Durée de l'animation (en ms)
-                $('html, body').animate( { scrollTop: $(section).offset().top }, speed ); // Go
+                $('html, body').animate({
+                    scrollTop: $(section).offset().top
+                }, speed); // Go
                 return false;
             });
+        });
+
+
+        document.getElementById("burger-menu").addEventListener("click", (event) => {
+            if (event.currentTarget.classList.contains("open")) {
+                event.currentTarget.classList.remove("open");
+                document.getElementById("menuresp").classList.remove("menurespopen");
+              
+            } else {
+                event.currentTarget.classList.add("open");
+                document.getElementById("menuresp").classList.add("menurespopen");
+            }
         });
     </script>
 
